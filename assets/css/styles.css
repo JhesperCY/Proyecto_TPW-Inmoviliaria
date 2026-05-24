@@ -144,6 +144,11 @@
 /* Selectores de tipo etiqueta */
 /* ----------------------------*/
 
+/* Suaviza el salto del scroll vertical */
+html {
+  scroll-behavior: smooth;
+}
+
 /* aplicar estilos a los elementos de la pagina */
 body {
   background-color: var(--color2);
@@ -552,6 +557,25 @@ nav a {
 
 .footercopy-column a:hover{
   color:var(--color2);
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background-color: var(--color1);
+  color: var(--color2);
+  border: none;
+}
+
+.scroll-up:hover {
+  background-color: var(--color11);
+  border: none;
+  color: var(--color2);
 }
 
 /* Sección principal del título de página. Permite mostrar una imagen de fondo centrada,
