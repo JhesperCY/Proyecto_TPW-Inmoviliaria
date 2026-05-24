@@ -57,6 +57,20 @@
   color: var(--color2);
 }
 
+#banner{
+  height:100vh;
+  background-image:url("../img/bannergh.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  
+}
+
 /*Flex box barra de menu*/
 .flex-header {
   background-color: var(--color1);
@@ -225,9 +239,22 @@ nav a {
   margin: auto;
 }
 
+.flex-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:80px;
+}
+
 .nav-logo {
   width: 149px;
-  height: auto;
+  display:flex;
+  align-items:center;
+}
+
+.nav-logo img{
+  height:100px;
+  width:auto;
 }
 
 /* Responsive para imagenes */
@@ -399,6 +426,7 @@ nav a {
   text-decoration: none;
   padding: 0px 5px;
 }
+
 
 .sticky-top {
   /*Deja el elemento pegado cuando llegue a la posicion 0 de la parte superior de la ventana*/
@@ -697,4 +725,16 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
   justify-content: center;
   color: var(--color6);
   gap: 25px;
+}
+
+.nav-menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+
+  /* Ocultar el boton temporalmente*/
+  display: none;
+}
+#proyectos{
+  color: #171717;
+  font-weight: bold;
 }
