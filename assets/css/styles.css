@@ -23,7 +23,10 @@
   /*Color subheading de los colaboradores*/
   --color10: #ffffffcc;
   /*X*/
-  --color11: #0345bfb3; /*Color azul con transparrencia para el efecto hover de las fotos del equipo*/
+  --color11: #0345bfb3; 
+  /*Color azul con transparrencia para el efecto hover de las fotos del equipo*/
+  --color12: #333333; 
+  /*Color del borde de los recuadros del formulario*/
 
   /* Tipografia */
   --fuente-titulos: "Montserrat", sans-serif;
@@ -178,7 +181,7 @@ p {
 }
 
 nav a {
-  color: white;
+  color:var(--color2);
   /*Color de la letra de el encabezado*/
   text-decoration: none;
   /* quita el subrayado */
@@ -438,20 +441,110 @@ nav a {
   resize: none;
 }
 
+.footer-section {
+  padding: 100px 0 50px;
+}
+
 .footer-flexbox {
-  display: flex;
-  flex-direction: row;
-  margin-left: -15px;
-  margin-right: -15px;
+  display:flex;
+  flex-wrap:wrap;
+  margin-left:-15px;
+  margin-right:-15px;
 }
 
 .footer-column {
-  flex-basis: 0;
-  flex-grow: 1;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width:25%;
+  flex-basis:25%;
+  padding-left:15px;
+  padding-right:15px;
 }
 
+.footer-column h2{
+  color:var(--color2);
+  font-size:22px;
+  margin-bottom:25px;
+  position:relative;
+}
+
+.footer-column h2::after{
+  content:"";
+  width:35px;
+  height:3px;
+  background-color:var(--color1);
+  position:absolute;
+  bottom:-8px;
+  left:0;
+}
+
+.footer-column p{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--color7);
+}
+
+.footer-column a{
+  display:block;
+  text-decoration:none;
+  color:var(--color7);
+  margin-bottom:12px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.footer-column a:hover{
+  color:var(--color2);
+}
+
+.imagen-column-about{
+  width:120px;
+  margin-top:0;
+  margin-bottom:30px;
+}
+
+.footer-column-send input{
+  width:100%;
+  background:transparent;
+  border:1px solid var(--color12);
+  color:var(--color2);
+  padding:10px;
+  margin-bottom:15px;
+}
+
+.footer-column-send button{
+  width:100%;
+  background-color:var(--color1);
+  color:var(--color2);
+  border:none;
+  padding:12px;
+  cursor:pointer;
+  text-transform:uppercase;
+}
+
+.footer-column-send button:hover{
+  background-color:var(--color4);
+}
+
+.footercopy-line {
+  border-top:1px solid var(--color12);
+}
+
+.footercopy-flexbox{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:45px;
+  flex-wrap:wrap;
+}
+
+.footercopy-column a{
+  color:var(--color7);
+  text-decoration:none;
+  margin-left:15px;
+}
+
+.footercopy-column a:hover{
+  color:var(--color2);
+}
 
 /* Sección principal del título de página. Permite mostrar una imagen de fondo centrada,
 alinear el contenido al centro y controlar la apariencia visual del banner */
