@@ -443,6 +443,7 @@ nav a {
 
 .footer-section {
   padding: 100px 0 50px;
+  line-height: 1.6;
 }
 
 .footer-flexbox {
@@ -461,6 +462,7 @@ nav a {
 
 .footer-column h2{
   color:var(--color2);
+  font-family:var(--fuente-titulos);
   font-size:22px;
   margin-bottom:25px;
   position:relative;
@@ -477,6 +479,7 @@ nav a {
 }
 
 .footer-column p{
+  font-family:var(--fuente-Parrafos);
   font-size:15px;
   line-height:1.7;
   color:var(--color7);
@@ -534,6 +537,11 @@ nav a {
   align-items:center;
   padding-top:45px;
   flex-wrap:wrap;
+}
+
+.footercopy-column{
+  font-family: var(--fuente-Parrafos);
+  font-size: 14px;
 }
 
 .footercopy-column a{
