@@ -58,7 +58,7 @@
 }
 
 #banner{
-  height:100vh;
+  height:calc(100vh - 100px);
   background-image:url("../img/bannergh.png");
   background-size:cover;
   background-position:center;
@@ -70,8 +70,6 @@
   text-align:center;
   color:var(--color2);
 }
-
-
 
 /*Flex box barra de menu*/
 .flex-header {
@@ -181,6 +179,7 @@ h5,
 h6 {
   font-family: var(--fuente-titulos);
   font-size: 22px;
+  color: var(--color4);
 }
 
 nav a {
@@ -338,12 +337,15 @@ nav a {
 /* flexbox Informacion acerca de nosotros */
 
 .contenedor-tarjetas {
-  background-color: var(--color5);
+  background-color: var(--color2);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   padding: 40px;
+  width: 100%;
+  height: auto;
+
 }
 
 .tarjeta {
@@ -352,7 +354,7 @@ nav a {
   overflow: hidden;
   box-shadow: 0 10px 20px var(--color6);
   transition: transform 0.4s ease;
-  flex: 1;
+  flex: 1 1 300px;
   max-width: 400px;
 }
 
@@ -364,16 +366,18 @@ nav a {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  order: -1;
 }
 
 .contenido-tarjeta {
   padding: 50px;
+  color: var(--color5);
 }
 
 .contenido-tarjeta h3 {
   margin-bottom: 10px;
   color: var(--color4);
-  font-family: var(--fuente-Parrafos);
+  font-family: var(--fuente-titulos);
 }
 .contenido-tarjeta-equipo h3 {
   margin: 10px;
@@ -388,6 +392,8 @@ nav a {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  height: auto;
+  width: 100%;
 }
 
 .item-trabajo {
@@ -396,6 +402,7 @@ nav a {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   cursor: pointer;
+  font-family: var(--fuente-titulos);
 }
 
 .item-trabajo:hover {
@@ -408,6 +415,11 @@ nav a {
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
+  height: auto;
+}
+.item-trabajo p {
+  margin-top: 10px;
+  font-size: 22px;
 }
 
 #topbar {
@@ -446,7 +458,7 @@ nav a {
   padding: 6px 12px;
   margin-bottom: 15px;
   font: inherit; /*Hereda la fuente del body*/
-  border: 1px;
+  
   outline: none;
   border-bottom: 1px solid var(--color6);
 }
@@ -739,4 +751,8 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
 #proyectos{
   color: #171717;
   font-weight: bold;
+}
+
+.slogan{
+  padding-top: 35px;
 }
