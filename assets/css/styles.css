@@ -52,6 +52,12 @@
 /* Selectores de tipo id */
 /* ----------------------*/
 
+#topbar {
+  background-color: var(--color6);
+  color: var(--color7);
+  font-size: 0.8rem;
+}
+
 #header {
   background-color: var(--color1);
   color: var(--color2);
@@ -69,37 +75,6 @@
   align-items:center;
   text-align:center;
   color:var(--color2);
-}
-
-/*Flex box barra de menu*/
-.flex-header {
-  background-color: var(--color1);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-nav {
-  display: flex;
-  flex-direction: row;
-}
-
-.main-nav-link {
-  display: inline-block;
-  /*Trata cada enlaze como una caja*/
-  color: var(--color10);
-  padding: 5px 10px;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-}
-
-.main-nav-link:hover {
-  color: var(--color2);
-}
-
-.main-nav-link-active {
-  color: var(--color2);
 }
 
 #footer {
@@ -154,6 +129,11 @@
   padding-bottom: 40px;
 }
 
+#proyectos{
+  color: #171717;
+  font-weight: bold;
+}
+
 /* ---------------------------- */
 /* Selectores de tipo etiqueta */
 /* ----------------------------*/
@@ -171,7 +151,6 @@ body {
   font-size: 15px;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -182,6 +161,11 @@ h6 {
   color: var(--color4);
 }
 
+h1{
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  color: var(--color2);
+}
 nav a {
   font-family: var(--fuente-titulos);
 }
@@ -240,11 +224,36 @@ nav a {
   margin: auto;
 }
 
-.flex-header{
+/*Flex box barra de menu*/
+.flex-header {
+  background-color:var(--color1);
   display:flex;
+  flex-direction:row;
   justify-content:space-between;
   align-items:center;
   height:80px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-nav-link {
+  display: inline-block;
+  /*Trata cada enlaze como una caja*/
+  color: var(--color10);
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.main-nav-link:hover {
+  color: var(--color2);
+}
+
+.main-nav-link-active {
+  color: var(--color2);
 }
 
 .nav-logo {
@@ -313,17 +322,31 @@ nav a {
   font-style: italic;
 }
 
+/*flexbox galeria de proyectos*/
 .galeria-bloques {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 50px;
+  text-align:center;
+  width:100%;
+  margin-bottom:50px;
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+  height:auto;
+
 }
 
 .item-trabajo {
-  width: 100%;
-  margin: auto;
-  padding: 20px;
-  text-align: left;
+  width:100%;
+  margin:auto;
+  padding:20px;
+  text-align:left;
+  flex:0 1 30%;
+  transition:transform 0.3s ease,
+             box-shadow 0.3s ease;
+  cursor:pointer;
+  font-family:var(--fuente-titulos);
 }
 
 .item-trabajo p {
@@ -385,26 +408,6 @@ nav a {
   font-family: var(--fuente-Parrafos);
 }
 
-/*flexbox galeria de proyectos*/
-.galeria-bloques {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  height: auto;
-  width: 100%;
-}
-
-.item-trabajo {
-  flex: 0 1 30%;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  cursor: pointer;
-  font-family: var(--fuente-titulos);
-}
-
 .item-trabajo:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 20px;
@@ -420,12 +423,6 @@ nav a {
 .item-trabajo p {
   margin-top: 10px;
   font-size: 22px;
-}
-
-#topbar {
-  background-color: var(--color6);
-  color: var(--color7);
-  font-size: 0.8rem;
 }
 
 .topbar-container {
@@ -748,7 +745,4 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
   /* Ocultar el boton temporalmente*/
   display: none;
 }
-#proyectos{
-  color: #171717;
-  font-weight: bold;
-}
+

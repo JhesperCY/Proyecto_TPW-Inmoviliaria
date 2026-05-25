@@ -77,24 +77,103 @@
     <main>
         <section class="page-title">
             <div class="page-title-content">
-                <h2>Nosotros</h2>
+                <h1>Nosotros</h1>
                 <p>Conoce mas sobre nuestra historia, mision y valores</p>
             </div>
         </section>
     </main>
 
     <footer id="footer" class="padding-s">
+      <section class="footer-section">
         <div class="container">
-            <h2>Contacto</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Antigua Calle Siete Jeringas 200 - Lima, Perú</p>
-            <p><i class="fas fa-phone-alt"></i> +51 911 666 777</p>
-            <p><i class="fas fa-envelope"></i> info@gotterhaus.com</p>
-            <p>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            </p>
-            <p>&copy; 2026 Goetterhaus</p>
+          <!-- Flexbox Padre footer-->
+          <div class="footer-flexbox">
+            <!-- FH1 footer -->
+            <div class="footer-column">
+              <div class="footer-column-about">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                  En Goetterhaus creamos espacios exclusivos que combinan
+                  diseño, innovación y calidad, transformando ideas en hogares
+                  modernos y funcionales.
+                </p>
+                <div class="imagen-column-about">
+                  <img
+                    class="img-fluid"
+                    src="../img/logogoetterhaus.png"
+                    alt="Goetterhaus"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- FH2 footer -->
+            <div class="footer-column">
+              <div class="footer-column-contacts">
+                <h2>Contacto</h2>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Antigua Calle Siete
+                  Jeringas 200 - Lima, Perú
+                </p>
+                <p><i class="fas fa-phone-alt"></i> +51 911 666 777</p>
+                <p><i class="fas fa-envelope"></i> info@gotterhaus.com</p>
+              </div>
+            </div>
+
+            <!-- FH3 footer -->
+            <div class="footer-column">
+              <div class="footer-column-navfast">
+                <h2>Navegacion Rapida</h2>
+                <a href="#">Acerca de la Empresa</a>
+                <a href="#">Nuestros Principales Servicios</a>
+                <a href="#">Nuestra Galeria de Proyectos</a>
+                <a href="#">Noticias y Guias</a>
+                <a href="#">Contactenos</a>
+              </div>
+            </div>
+
+            <!-- FH4 footer (form) -->
+            <div class="footer-column">
+              <div class="footer-column-send">
+                <h2>Póngase en Contacto</h2>
+                <form>
+                  <input type="text" placeholder="Nombre" required />
+                  <input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    required
+                  />
+                  <button type="submit">
+                    <i class="fa-solid fa-envelope"></i> &nbsp; Enviar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <section class="footercopy-line">
+        <div class="container">
+          <!-- Flexbox Padre footer copy-->
+          <div class="footercopy-flexbox">
+            <!-- FH1 footer copy -->
+            <div class="footercopy-column">
+              <div>
+                <p>&copy; 2026 Gotterhaus</p>
+              </div>
+            </div>
+            <!-- FH1 footer copy -->
+            <div>
+              <div class="footercopy-column">
+                <p>
+                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </footer>
 </body>
 </html>
